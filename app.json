@@ -1,0 +1,12 @@
+{
+  "name": "bos",
+  "displayName": "bos",
+  "expo": {
+    "name": "bos",
+    "slug": "bos",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
