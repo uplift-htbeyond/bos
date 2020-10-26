@@ -1,21 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {useState} from 'react';
+import { StyleSheet, Text, View, Image, Button, TouchableHighlight } from 'react-native';
+import styles from './Styles';
 
 export default function App() {
+  const [pressing, setPressing] = useState(false);
+  function _onPressIn() {
+    setPressing(true)
+  }
+  function _onPressOut() {
+    setPressing(false)
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={styles.parent}>
+        <Text style={styles.child}> Child One </Text>
+        <Text style={styles.child}> Child Two </Text>
+        <Text style={styles.child}> Child Three </Text>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
